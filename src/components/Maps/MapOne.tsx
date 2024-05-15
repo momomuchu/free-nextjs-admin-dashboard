@@ -1,14 +1,13 @@
-"use client";
 import jsVectorMap from "jsvectormap";
 import "jsvectormap/dist/css/jsvectormap.css";
 import React, { useEffect } from "react";
-import "../../js/us-aea-en";
+import "../../js/fr-merc-en";  // Ensure this import points to the correct file for the French map
 
 const MapOne: React.FC = () => {
   useEffect(() => {
     const mapOne = new jsVectorMap({
       selector: "#mapOne",
-      map: "us_aea_en",
+      map: "fr_merc_en", // Update this to the appropriate map code for France
       zoomButtons: true,
 
       regionStyle: {
@@ -20,7 +19,17 @@ const MapOne: React.FC = () => {
           fill: "#3056D3",
         },
       },
-      regionLabelStyle: {
+      regionLabelS"use client";
+      import jsVectorMap from "jsvectormap";
+      import "jsvectormap/dist/css/jsvectormap.css";
+      import React, { useEffect } from "react";
+      import "../../js/us-aea-en";
+      
+      const MapOne: React.FC = () => {
+        useEffect(() => {
+          const mapOne = new jsVectorMap({
+            selector: "#mapOne",
+      …tyle: {
         initial: {
           fontFamily: "Satoshi",
           fontWeight: "semibold",
@@ -34,7 +43,8 @@ const MapOne: React.FC = () => {
       labels: {
         regions: {
           render(code: string) {
-            return code.split("-")[1];
+            // Update the label rendering logic if needed, based on how French regions are coded
+            return code.split("-")[1]; // You may need to adjust this depending on the actual data format
           },
         },
       },
